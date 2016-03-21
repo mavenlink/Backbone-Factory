@@ -1,0 +1,28 @@
+{
+  "name": "backbone-factory",
+  "version": "0.0.1",
+  "description": "Backbone Factory is a small javascript library for creating Backbone.js objects for testing your code. It has no external dependency.",
+  "main": "public/javascripts/backbone-factory.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jrolfs/Backbone-Factory.git"
+  },
+  "keywords": [
+    "backbone",
+    "factory",
+    "factory-girl"
+  ],
+  "author": "Prateek Dayal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jrolfs/Backbone-Factory/issues"
+  },
+  "homepage": "https://github.com/jrolfs/Backbone-Factory",
+  "dependencies": {
+    "jquery": "^2.2.2",
+    "underscore": "^1.8.3"
+  }
+}

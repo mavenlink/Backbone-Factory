@@ -24,7 +24,7 @@ BackboneFactory = {
     // The object creator
     this.factories[factory_name] = function(options){
       if(options === undefined) options = function(){return {}};
-      args = _.extend({}, {id: BackboneFactory.next("_" + factory_name + "_id")}, defaults.call(), options.call());
+      var args = _.extend({}, {id: BackboneFactory.next("_" + factory_name + "_id")}, defaults.call(), options.call());
       return new klass(args);
     };
 
@@ -38,7 +38,18 @@ BackboneFactory = {
     if(this.factories[factory_name] === undefined){
       throw "Factory with name " + factory_name + " does not exist";
     }
-    return this.factories[factory_name].apply(null, [options]);        
+
+    var factoryOptions = {}
+
+    $.each(options, function(key, value){
+      if (typeof(value) === "function"){
+        factoryOptions[key] = value.call();
+      } else {
+        factoryOptions[key] = value;
+      }
+    });
+
+    return this.factories[factory_name].apply(null, [factoryOptions]);
   },
 
   define_sequence: function(sequence_name, callback){

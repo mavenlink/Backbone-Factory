@@ -39,17 +39,21 @@ BackboneFactory = {
       throw "Factory with name " + factory_name + " does not exist";
     }
 
-    var factoryOptions = {}
+    if(typeof(options) !== "function"){
+      var factoryOptions = {}
 
-    $.each(options, function(key, value){
-      if (typeof(value) === "function"){
-        factoryOptions[key] = value.call();
-      } else {
-        factoryOptions[key] = value;
-      }
-    });
+      $.each(options, function(key, value){
+        if (typeof(value) === "function"){
+          factoryOptions[key] = value.call();
+        } else {
+          factoryOptions[key] = value;
+        }
+      });
 
-    return this.factories[factory_name].apply(null, [factoryOptions]);
+      options = function(){return factoryOptions};
+    }
+
+    return this.factories[factory_name].apply(null, [options]);
   },
 
   define_sequence: function(sequence_name, callback){

@@ -1,8 +1,8 @@
 // Backbone Factory JS
 // https://github.com/SupportBee/Backbone-Factory
 
-$ = require('jquery');
-_ = require('underscore');
+var $ = require('jquery');
+var _ = require('underscore');
 
 BackboneFactory = {
 

@@ -1,6 +1,6 @@
 {
   "name": "backbone-factory",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Backbone Factory is a small javascript library for creating Backbone.js objects for testing your code. It has no external dependency.",
   "main": "public/javascripts/backbone-factory.js",
   "scripts": {

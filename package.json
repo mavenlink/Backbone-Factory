@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jrolfs/Backbone-Factory.git"
+    "url": "https://github.com/mavenlink/Backbone-Factory.git"
   },
   "keywords": [
     "backbone",
@@ -18,9 +18,9 @@
   "author": "Prateek Dayal",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jrolfs/Backbone-Factory/issues"
+    "url": "https://github.com/mavenlink/Backbone-Factory/issues"
   },
-  "homepage": "https://github.com/jrolfs/Backbone-Factory",
+  "homepage": "https://github.com/mavenlink/Backbone-Factory",
   "dependencies": {
     "lodash.assign": "^4.2.0",
     "lodash.foreach": "^4.5.0"

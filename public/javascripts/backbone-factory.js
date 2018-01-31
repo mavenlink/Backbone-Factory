@@ -2,7 +2,7 @@
 // https://github.com/SupportBee/Backbone-Factory
 
 var $ = require('jquery');
-var _ = require('underscore');
+var assign = require('lodash.assign');
 
 BackboneFactory = {
 
@@ -24,7 +24,7 @@ BackboneFactory = {
     // The object creator
     this.factories[factory_name] = function(options){
       if(options === undefined) options = function(){return {}};
-      var args = _.extend({}, {id: BackboneFactory.next("_" + factory_name + "_id")}, defaults.call(), options.call());
+      var args = assign({}, {id: BackboneFactory.next("_" + factory_name + "_id")}, defaults.call(), options.call());
       return new klass(args);
     };
 

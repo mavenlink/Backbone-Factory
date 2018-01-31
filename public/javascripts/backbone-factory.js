@@ -1,8 +1,8 @@
 // Backbone Factory JS
 // https://github.com/SupportBee/Backbone-Factory
 
-var $ = require('jquery');
 var assign = require('lodash.assign');
+var forEach = require('lodash.forEach');
 
 BackboneFactory = {
 
@@ -42,7 +42,7 @@ BackboneFactory = {
     if(typeof(options) !== "function"){
       var factoryOptions = {}
 
-      $.each(options, function(key, value){
+      forEach(options, function(key, value){
         if (typeof(value) === "function"){
           factoryOptions[key] = value.call();
         } else {

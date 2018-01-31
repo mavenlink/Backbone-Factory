@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/jrolfs/Backbone-Factory",
   "dependencies": {
-    "jquery": "^2.2.2",
-    "lodash.assign": "^4.2.0"
+    "lodash.assign": "^4.2.0",
+    "lodash.foreach": "^4.5.0"
   }
 }

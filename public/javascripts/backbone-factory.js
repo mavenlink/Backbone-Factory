@@ -2,7 +2,7 @@
 // https://github.com/SupportBee/Backbone-Factory
 
 var assign = require('lodash.assign');
-var forEach = require('lodash.forEach');
+var forEach = require('lodash.foreach');
 
 BackboneFactory = {
 

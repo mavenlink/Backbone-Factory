@@ -42,7 +42,7 @@ BackboneFactory = {
     if(typeof(options) !== "function"){
       var factoryOptions = {}
 
-      forEach(options, function(key, value){
+      forEach(options, function(value, key){
         if (typeof(value) === "function"){
           factoryOptions[key] = value.call();
         } else {
